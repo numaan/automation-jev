@@ -1,0 +1,12 @@
+{
+  "goal": "Search Google for 'playwright testing' and reach the search results page",
+  "startUrl": "https://www.google.com/ncr",
+  "data": {
+    "query": "playwright testing"
+  },
+  "maxSteps": 6,
+  "minConfidence": 0.35,
+  "doneThreshold": 0.8,
+  "headless": true,
+  "out": "generated/google.spec.ts"
+}

@@ -78,8 +78,16 @@ const EXTRACT_JS = String.raw`(() => {
     seen.add(el);
     const tag = el.tagName.toLowerCase();
     const implicitRole = tag === "a" ? "link" : tag === "button" ? "button" : tag;
+    const realKind = tag === "select" ? "select" : kind;
+    let options;
+    if (tag === "select") {
+      options = Array.from(el.options || []).map((o) => ({
+        value: o.value,
+        label: (o.textContent || o.value || "").replace(/\s+/g, " ").trim(),
+      }));
+    }
     out.push({
-      kind: kind,
+      kind: realKind,
       tag: tag,
       role: el.getAttribute("role") || implicitRole,
       name: accessibleName(el),
@@ -88,6 +96,7 @@ const EXTRACT_JS = String.raw`(() => {
       ariaLabel: el.getAttribute("aria-label") || undefined,
       href: (typeof el.getAttribute === "function" ? el.getAttribute("href") : null) || undefined,
       value: el.value || undefined,
+      options: options,
       css: cssPath(el),
     });
   }
@@ -113,7 +122,7 @@ export async function extractCandidates(page: Page): Promise<Candidate[]> {
 /** Build the Playwright locator source string used in the generated script. */
 export function locatorSource(c: Candidate): string {
   const q = (s: string) => JSON.stringify(s);
-  if (c.kind === "fill") {
+  if (c.kind === "fill" || c.kind === "select") {
     if (c.ariaLabel) return `page.getByLabel(${q(c.ariaLabel)})`;
     if (c.name && c.name !== c.placeholder) return `page.getByLabel(${q(c.name)})`;
     if (c.placeholder) return `page.getByPlaceholder(${q(c.placeholder)})`;
@@ -128,10 +137,17 @@ export function locatorSource(c: Candidate): string {
 
 /** A short human-readable description used both for Jev criteria and comments. */
 export function describe(c: Candidate): string {
-  const bits = [`${c.kind === "fill" ? "input field" : c.role}`];
+  const kindLabel =
+    c.kind === "fill" ? "input field" : c.kind === "select" ? "dropdown" : c.role;
+  const bits = [kindLabel];
   if (c.name) bits.push(`labelled "${c.name}"`);
   if (c.inputType) bits.push(`(type=${c.inputType})`);
   if (c.href) bits.push(`-> ${c.href}`);
-  if (c.value) bits.push(`current value: "${c.value}"`);
+  if (c.kind === "select" && c.options?.length) {
+    const sample = c.options.slice(0, 6).map((o) => o.label).filter(Boolean);
+    bits.push(`options: ${sample.join(", ")}${c.options.length > 6 ? ", …" : ""}`);
+  } else if (c.value) {
+    bits.push(`current value: "${c.value}"`);
+  }
   return bits.join(" ");
 }

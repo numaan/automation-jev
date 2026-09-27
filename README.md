@@ -51,15 +51,49 @@ cp .env.example .env    # then put your TYPESAFE_API_KEY in it
 
 ## Run
 
+Two modes. See [requirement.md](requirement.md) for the full spec.
+
+### Interactive mode — type instructions in plain English
+
+```bash
+npm run interactive -- https://example.com/login
+```
+
+Then type instructions at the `jev>` prompt. Jev picks the element; you're prompted
+for a value or to pick an option when needed; the action runs in the browser and is
+recorded.
+
+```
+jev> type "you@example.com" into the email field
+  Jev → input field labelled "Email address"  (confidence 1.00)
+  ✓ filled "Email address"
+jev> enter my password
+  Jev → input field labelled "Password"  (confidence 1.00)
+  Value for "Password": ······
+  ✓ filled "Password"
+jev> select India for country
+  Jev → select "India" (confidence 1.00)
+  ✓ selected "India"
+jev> click the sign in button
+  ✓ clicked "Sign in"
+jev> :quit
+  ✔ 4 steps → generated/interactive.spec.ts
+```
+
+When Jev isn't confident, it lists the candidate elements and asks you to pick a
+number (or skip). Commands: `:goto <url>`, `:show`, `:save [path]`, `:undo`,
+`:help`, `:quit`. Flags: `--headless`, `--out <path>`, `--min <0..1>`.
+
+### Autonomous mode — goal + data in a task file
+
 Edit `task.example.json` (or make your own), then:
 
 ```bash
 npm run record -- task.example.json
 ```
 
-Watch it navigate (set `"headless": true` to run silently). The generated script
-lands at the task's `out` path, e.g. `generated/login.spec.ts`. Run it like any
-Playwright test:
+Set `"headless": true` to run silently. The generated script lands at the task's
+`out` path. Run either mode's output like any Playwright test:
 
 ```bash
 npx playwright test generated/

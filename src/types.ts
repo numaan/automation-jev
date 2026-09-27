@@ -1,4 +1,9 @@
-export type Kind = "click" | "fill";
+export type Kind = "click" | "fill" | "select";
+
+export interface SelectOption {
+  value: string;
+  label: string;
+}
 
 /** A candidate interactive element on the current page. */
 export interface Candidate {
@@ -14,13 +19,15 @@ export interface Candidate {
   ariaLabel?: string;
   href?: string;
   value?: string;
+  /** Options for a <select> element. */
+  options?: SelectOption[];
   /** Unique CSS selector, used as the execution fallback. */
   css: string;
 }
 
 /** A recorded step, both executed live and emitted into the script. */
 export interface Step {
-  action: "goto" | "click" | "fill";
+  action: "goto" | "click" | "fill" | "select";
   /** Playwright locator source used in the generated script, e.g. getByRole(...). */
   locator: string;
   value?: string;
