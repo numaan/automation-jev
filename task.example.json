@@ -1,0 +1,13 @@
+{
+  "goal": "Sign in with the test account and reach the account dashboard",
+  "startUrl": "https://example.com/login",
+  "data": {
+    "email": "test.user@example.com",
+    "password": "ExamplePassword123!"
+  },
+  "maxSteps": 12,
+  "minConfidence": 0.4,
+  "doneThreshold": 0.8,
+  "headless": false,
+  "out": "generated/login.spec.ts"
+}

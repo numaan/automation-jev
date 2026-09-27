@@ -1,0 +1,22 @@
+{
+  "name": "jev-playwright-recorder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Use Jev (TypeSafe System One) to navigate a site and emit a Playwright script.",
+  "scripts": {
+    "record": "tsx src/run.ts",
+    "test:generated": "playwright test generated/"
+  },
+  "dependencies": {
+    "@typesafe-ai/sdk": "^0.6.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.48.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
