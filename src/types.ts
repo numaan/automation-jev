@@ -27,10 +27,12 @@ export interface Candidate {
 
 /** A recorded step, both executed live and emitted into the script. */
 export interface Step {
-  action: "goto" | "click" | "fill" | "select";
+  action: "goto" | "click" | "fill" | "select" | "assert";
   /** Playwright locator source used in the generated script, e.g. getByRole(...). */
   locator: string;
   value?: string;
+  /** Name of an environment variable that holds the value (used for secrets). */
+  valueEnv?: string;
   url?: string;
   /** Human note for comments in the generated script. */
   note: string;

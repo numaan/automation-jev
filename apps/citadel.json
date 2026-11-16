@@ -1,0 +1,7 @@
+{
+  "name": "citadel-one",
+  "url": "http://localhost:5450",
+  "login": { "type": "role", "role": "Agent Developer" },
+  "maxScreens": 40,
+  "perPattern": 1
+}

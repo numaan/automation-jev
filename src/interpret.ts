@@ -1,4 +1,4 @@
-import { TypeSafeClient, choice } from "@typesafe-ai/sdk";
+import { TypeSafeClient, choice, noul } from "@typesafe-ai/sdk";
 import type { Candidate, SelectOption } from "./types.js";
 import { describe } from "./extract.js";
 
@@ -120,4 +120,67 @@ export async function chooseOption(params: {
   const picked = options[Number(ans.choice.slice(4))] ?? null;
 
   return { option: picked, confidence: ans.confidence, ranked };
+}
+
+export interface ScreenDecision {
+  pick: string;
+  confidence: number;
+  probabilities: Record<string, number>;
+}
+
+/**
+ * Given one acceptance-criterion step and what the explorer knows about every
+ * screen, ask the model which screen the step belongs on. Screen ids are the
+ * hrefs. The caller prefers the current screen when the step continues there.
+ */
+export async function chooseScreen(params: {
+  step: string;
+  currentScreen: string | null;
+  previousSteps: string[];
+  screens: Record<string, string>; // id -> description
+  /** True when the step only moves to a screen ("go to X"): the answer is the destination. */
+  navigate?: boolean;
+}): Promise<ScreenDecision> {
+  const { step, currentScreen, previousSteps, screens, navigate } = params;
+  const forTarget = step.replace(/"[^"]*"|'[^']*'/g, " ").replace(/\s+/g, " ").trim();
+  const response = await client.systemOne({
+    state: {
+      acceptanceCriterionStep: forTarget || step,
+      // A navigation step must not see the current screen, or the model stays put.
+      ...(navigate ? {} : { currentScreen: currentScreen ?? "none", previousSteps }),
+    },
+    questions: {
+      screen: choice(
+        navigate
+          ? "Which screen of the application does this step ask the user to go to?"
+          : "Which screen of the application is this acceptance-criterion step " +
+              "performed on or about? Choose the current screen if the step continues there.",
+        screens
+      ),
+    },
+  });
+  const a = response.answers.screen;
+  return { pick: a.choice, confidence: a.confidence, probabilities: a.probabilities };
+}
+
+/**
+ * Judge a free-text statement ("the page lists the agent") against the visible
+ * text of the current page. Returns the probability that the statement is true.
+ */
+export async function judgeStatement(params: {
+  statement: string;
+  url: string;
+  pageText: string;
+}): Promise<number> {
+  const response = await client.systemOne({
+    state: {
+      statement: params.statement,
+      currentUrl: params.url,
+      visiblePageText: params.pageText.slice(0, 4000),
+    },
+    questions: {
+      holds: noul("Is the statement in `statement` true for the page shown in `visiblePageText`?"),
+    },
+  });
+  return response.answers.holds.noul;
 }

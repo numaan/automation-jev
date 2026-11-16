@@ -18,14 +18,19 @@ export function emitScript(title: string, steps: Step[]): string {
     } else if (s.action === "click") {
       lines.push(`  await ${s.locator}.click();`);
     } else if (s.action === "fill") {
-      lines.push(`  await ${s.locator}.fill(${q(s.value ?? "")});`);
+      if (s.valueEnv) lines.push(`  await ${s.locator}.fill(process.env[${q(s.valueEnv)}] ?? "");`);
+      else lines.push(`  await ${s.locator}.fill(${q(s.value ?? "")});`);
+    } else if (s.action === "assert") {
+      if (s.locator) lines.push(`  await ${s.locator};`);
     } else if (s.action === "select") {
       lines.push(`  await ${s.locator}.selectOption(${q(s.value ?? "")});`);
     }
   }
-  lines.push("");
-  lines.push(`  // TODO: add an assertion that proves the goal was reached, e.g.`);
-  lines.push(`  // await expect(page.getByText("Success")).toBeVisible();`);
+  if (!steps.some((s) => s.action === "assert")) {
+    lines.push("");
+    lines.push(`  // TODO: add an assertion that proves the goal was reached, e.g.`);
+    lines.push(`  // await expect(page.getByText("Success")).toBeVisible();`);
+  }
   lines.push(`});`);
   lines.push("");
   return lines.join("\n");

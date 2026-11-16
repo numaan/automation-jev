@@ -23,6 +23,10 @@ export async function record(task: Task): Promise<Step[]> {
   const page = await browser.newPage();
   const steps: Step[] = [];
   const history: string[] = [];
+  // Fields already filled on the current page. The model tends to re-pick them,
+  // so code removes them from the candidates. Cleared when the page path changes.
+  const filled = new Set<string>();
+  let filledPath = "";
 
   await page.goto(startUrl, { waitUntil: "domcontentloaded" });
   steps.push({ action: "goto", locator: "", url: startUrl, note: `open ${startUrl}` });
@@ -30,8 +34,15 @@ export async function record(task: Task): Promise<Step[]> {
   try {
     for (let i = 0; i < maxSteps; i++) {
       await page.waitForLoadState("domcontentloaded").catch(() => {});
-      const candidates = await extractCandidates(page);
       const currentUrl = page.url();
+      const path = new URL(currentUrl).pathname;
+      if (path !== filledPath) {
+        filled.clear();
+        filledPath = path;
+      }
+      const candidates = (await extractCandidates(page)).filter(
+        (c) => !(c.kind === "fill" && filled.has(c.css))
+      );
       const pageTitle = await page.title();
 
       console.log(`\n── step ${i + 1} · ${currentUrl}`);
@@ -94,6 +105,7 @@ export async function record(task: Task): Promise<Step[]> {
         const value = data[key];
         console.log(`   fill "${chosen.name}" ← data.${key} (conf ${confidence.toFixed(2)})`);
         await loc.fill(value);
+        filled.add(chosen.css);
         steps.push({
           action: "fill",
           locator: src,
@@ -104,7 +116,8 @@ export async function record(task: Task): Promise<Step[]> {
       } else {
         console.log(`   click ${describe(chosen)}`);
         await Promise.all([
-          loc.click(),
+          // An overlay (e.g. autocomplete dropdown) can block the click; retry forced.
+          loc.click({ timeout: 5000 }).catch(() => loc.click({ force: true })),
           page.waitForLoadState("domcontentloaded").catch(() => {}),
         ]);
         steps.push({ action: "click", locator: src, note: `click ${describe(chosen)}` });

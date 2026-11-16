@@ -7,6 +7,8 @@
   "scripts": {
     "record": "tsx src/run.ts",
     "interactive": "tsx src/interactive.ts",
+    "crawl": "tsx src/crawl.ts",
+    "ac": "tsx src/ac.ts",
     "test:generated": "playwright test generated/"
   },
   "dependencies": {

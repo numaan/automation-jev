@@ -1,0 +1,6 @@
+{
+  "name": "demo",
+  "url": "http://localhost:5461",
+  "login": { "type": "password", "usernameEnv": "DEMO_USER", "passwordEnv": "DEMO_PASS", "loginUrl": "http://localhost:5461/login", "label": "alice" },
+  "headless": true
+}

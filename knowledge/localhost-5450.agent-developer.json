@@ -1,0 +1,2558 @@
+{
+  "app": "localhost:5450",
+  "origin": "http://localhost:5450",
+  "role": "Agent Developer",
+  "generatedAt": "2026-11-16T19:05:13.502Z",
+  "login": {
+    "type": "role",
+    "label": "Agent Developer",
+    "roleLabel": "Agent Developer"
+  },
+  "shell": {
+    "links": [
+      {
+        "text": "Home",
+        "href": "/"
+      },
+      {
+        "text": "Agents",
+        "href": "/agents"
+      },
+      {
+        "text": "Onboard an agent",
+        "href": "/onboard"
+      },
+      {
+        "text": "Agent playground",
+        "href": "/playground"
+      },
+      {
+        "text": "MCP servers",
+        "href": "/mcp-servers"
+      },
+      {
+        "text": "Models",
+        "href": "/models"
+      },
+      {
+        "text": "Requests & decisions",
+        "href": "/requests"
+      }
+    ],
+    "controls": [
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Collapse sidebar",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Inventory",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Monitoring",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "summary",
+        "name": "View as · dev"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Agent Developer",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Approver",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "SRE",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Administrator",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Auditor",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Security",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Finance",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Compliance officer",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "CISO",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "CIO",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "COO",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Policy author",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Account menu for Agent Developer",
+        "inputType": "button"
+      },
+      {
+        "kind": "click",
+        "role": "button",
+        "name": "Inbox, 0 unread",
+        "inputType": "button"
+      }
+    ]
+  },
+  "screens": [
+    {
+      "id": "/",
+      "href": "/",
+      "title": "Agent developer Dashboard · Citadel-One",
+      "heading": "Agent developer Dashboard",
+      "subheadings": [
+        "Runtime decisions",
+        "Calls by model",
+        "Needs your attention",
+        "Recent activity",
+        "Your agents"
+      ],
+      "links": [
+        {
+          "text": "Overview",
+          "href": "/"
+        },
+        {
+          "text": "Map overview",
+          "href": "/?tab=map"
+        },
+        {
+          "text": "Govern overview",
+          "href": "/?tab=govern"
+        },
+        {
+          "text": "Measure overview",
+          "href": "/?tab=measure"
+        },
+        {
+          "text": "Operate overview",
+          "href": "/?tab=operate"
+        },
+        {
+          "text": "Open playground",
+          "href": "/playground"
+        },
+        {
+          "text": "Agents running2of 10 · 2 with changes requestedSeed data",
+          "href": "/agents?tab=mine"
+        },
+        {
+          "text": "Calls · today108.2%vs. same time yesterdaySeed data",
+          "href": "/requests"
+        },
+        {
+          "text": "Blocked by policy · today80.0%0.6 pts8 callsSeed data",
+          "href": "/requests"
+        },
+        {
+          "text": "All calls",
+          "href": "/requests"
+        },
+        {
+          "text": "Request a model",
+          "href": "/models"
+        },
+        {
+          "text": "Respond",
+          "href": "/my-requests/req-0010"
+        },
+        {
+          "text": "Respond",
+          "href": "/my-requests/req-0003"
+        },
+        {
+          "text": "See calls",
+          "href": "/requests"
+        },
+        {
+          "text": "All agents",
+          "href": "/agents?tab=mine"
+        },
+        {
+          "text": "data-export-agent",
+          "href": "/agents/data-export-agent"
+        },
+        {
+          "text": "Respond",
+          "href": "/my-requests/req-0010"
+        },
+        {
+          "text": "notify-agent",
+          "href": "/agents/notify-agent"
+        },
+        {
+          "text": "Respond",
+          "href": "/my-requests/req-0003"
+        },
+        {
+          "text": "report-agent",
+          "href": "/agents/report-agent"
+        },
+        {
+          "text": "research-agent",
+          "href": "/agents/research-agent"
+        },
+        {
+          "text": "digest-agent",
+          "href": "/agents/digest-agent"
+        },
+        {
+          "text": "log-summarizer-agent",
+          "href": "/agents/log-summarizer-agent"
+        },
+        {
+          "text": "market-feed-agent",
+          "href": "/agents/market-feed-agent"
+        },
+        {
+          "text": "nightly-recon-agent",
+          "href": "/agents/nightly-recon-agent"
+        },
+        {
+          "text": "rogue-agent",
+          "href": "/agents/rogue-agent"
+        },
+        {
+          "text": "sync-agent",
+          "href": "/agents/sync-agent"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Filter agents by name",
+          "inputType": "search",
+          "placeholder": "Filter by name"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Today",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "7 d",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "30 d",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Card view",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Table view",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "id": "/agents",
+      "href": "/agents",
+      "title": "Agents · Citadel-One",
+      "heading": "Agents",
+      "subheadings": [
+        "report-agent",
+        "research-agent"
+      ],
+      "links": [
+        {
+          "text": "Catalog",
+          "href": "/agents"
+        },
+        {
+          "text": "Agents",
+          "href": "/agents?tab=mine"
+        },
+        {
+          "text": "AI system assurance",
+          "href": "/agents?tab=assurance"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Search this catalog",
+          "inputType": "text",
+          "placeholder": "Search…"
+        },
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Filter by type",
+          "options": [
+            "All types",
+            "in-cluster",
+            "remote",
+            "type not recorded"
+          ]
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "MCP servers",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Agents",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Models",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Supported LLMs",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Policies",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Controls",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About AI systems",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Cards",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Grid",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Ava Approver",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details of report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Ava Approver",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details of research-agent",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/onboard",
+      "href": "/onboard",
+      "title": "Onboard an agent · Citadel-One",
+      "heading": "Onboard an agent",
+      "subheadings": [
+        "Onboard agent",
+        "Agent type",
+        "Your request"
+      ],
+      "links": [],
+      "controls": [
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Back to My AI systems",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Source to ImageBuild from a Git repository and scan the code before deployment.",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Remote AgentRegister an externally running agent. Requests are routed through th",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Agent ComposerBuild from an Agent Composer project in Git. It is scanned, built ",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Prebuilt imageAn agent already built into a digest-pinned image in your registry",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Continue",
+          "inputType": "submit"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/playground",
+      "href": "/playground",
+      "title": "Agent playground · Citadel-One",
+      "heading": "Agent playground",
+      "subheadings": [],
+      "links": [],
+      "controls": [
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Agent",
+          "options": [
+            "Choose an agent…",
+            "report-agent",
+            "research-agent",
+            "rogue-agent",
+            "market-feed-agent"
+          ]
+        },
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Endpoint",
+          "inputType": "text",
+          "placeholder": "Choose an agent"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/mcp-servers",
+      "href": "/mcp-servers",
+      "title": "MCP servers · Citadel-One",
+      "heading": "MCP servers",
+      "subheadings": [],
+      "links": [],
+      "controls": [
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Search MCP servers…",
+          "inputType": "text",
+          "placeholder": "Search MCP servers…"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About MCP servers",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Onboard MCP server",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Compact",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Comfortable",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Server",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Tools",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Requested by",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/models",
+      "href": "/models",
+      "title": "Models · Citadel-One",
+      "heading": "Models",
+      "subheadings": [],
+      "links": [],
+      "controls": [
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Search models…",
+          "inputType": "text",
+          "placeholder": "Search models…"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About LLM models",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Onboard LLM",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Compact",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Comfortable",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Model",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Capability class",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Requested by",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/requests",
+      "href": "/requests",
+      "title": "Requests & decisions · Citadel-One",
+      "heading": "Requests & decisions",
+      "subheadings": [
+        "Calls"
+      ],
+      "links": [
+        {
+          "text": "Request traces",
+          "href": "/requests"
+        },
+        {
+          "text": "Monitoring",
+          "href": "/requests?tab=monitoring"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Agentreport-agentresearch-agentrogue-agentmarket-feed-agent",
+          "options": [
+            "report-agent",
+            "research-agent",
+            "rogue-agent",
+            "market-feed-agent"
+          ]
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Calls",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Service map",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Calls",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "15m",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "1h",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "6h",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "24h",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Custom",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Not reported280 msokAgent report-agent → MCP hr-mcp · lookup-employee → Gateway ",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/?tab=map",
+      "href": "/?tab=map",
+      "title": "Home · Citadel-One",
+      "heading": "Home",
+      "subheadings": [
+        "Agents by status",
+        "Record fill",
+        "MCP servers",
+        "LLM models",
+        "Agents by department",
+        "Data classes in scope",
+        "Agents by age in the cluster",
+        "Widest entitlements",
+        "External hosts in grants",
+        "MCP server dependencies",
+        "Model dependencies"
+      ],
+      "links": [
+        {
+          "text": "Overview",
+          "href": "/"
+        },
+        {
+          "text": "Map overview",
+          "href": "/?tab=map"
+        },
+        {
+          "text": "Govern overview",
+          "href": "/?tab=govern"
+        },
+        {
+          "text": "Measure overview",
+          "href": "/?tab=measure"
+        },
+        {
+          "text": "Operate overview",
+          "href": "/?tab=operate"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Agents by status",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Record fill",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About MCP servers",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About LLM models",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Agents by department",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Data classes in scope",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Agents by age in the cluster",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Widest entitlements",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Models",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Tools r / w",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Secrets",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Hosts",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About External hosts in grants",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Host",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Agents",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About MCP server dependencies",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "MCP server",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "State",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Tools r / w",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Used by",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Model dependencies",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Model",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Class",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Used by",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/?tab=govern",
+      "href": "/?tab=govern",
+      "title": "Home · Citadel-One",
+      "heading": "Home",
+      "subheadings": [
+        "Awaiting approval",
+        "Controls by coverage",
+        "Controls cited per framework",
+        "Policies by risk of non-compliance",
+        "Policies",
+        "Controls"
+      ],
+      "links": [
+        {
+          "text": "Overview",
+          "href": "/"
+        },
+        {
+          "text": "Map overview",
+          "href": "/?tab=map"
+        },
+        {
+          "text": "Govern overview",
+          "href": "/?tab=govern"
+        },
+        {
+          "text": "Measure overview",
+          "href": "/?tab=measure"
+        },
+        {
+          "text": "Operate overview",
+          "href": "/?tab=operate"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Regulations cited by an enforcing control",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Awaiting approval",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Controls by coverage",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Controls cited per framework",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Policies by risk of non-compliance",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Policies",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Controls",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/?tab=measure",
+      "href": "/?tab=measure",
+      "title": "Home · Citadel-One",
+      "heading": "Home",
+      "subheadings": [
+        "Traffic by AI system",
+        "Where requests go",
+        "Policy decisions by kind",
+        "Allowed and denied",
+        "Denials by AI system",
+        "Token and cost usage"
+      ],
+      "links": [
+        {
+          "text": "Overview",
+          "href": "/"
+        },
+        {
+          "text": "Map overview",
+          "href": "/?tab=map"
+        },
+        {
+          "text": "Govern overview",
+          "href": "/?tab=govern"
+        },
+        {
+          "text": "Measure overview",
+          "href": "/?tab=measure"
+        },
+        {
+          "text": "Operate overview",
+          "href": "/?tab=operate"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last 15 minutes",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last hour",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last 6 hours",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last 24 hours",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "2Requests per second",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "80%Decisions denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Traffic by AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Req/s",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "5xx",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "p95",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Where requests go",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Destination",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Req/s",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "5xx",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "p95 (slowest caller)",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Policy decisions by kind",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Kind",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Allowed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied share",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Allowed and denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Denials by AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Token and cost usage",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/?tab=operate",
+      "href": "/?tab=operate",
+      "title": "Home · Citadel-One",
+      "heading": "Home",
+      "subheadings": [
+        "AI systems",
+        "MCP servers",
+        "Model providers",
+        "Latency and errors",
+        "Platform dependencies",
+        "Recent failures",
+        "Monitored agents",
+        "Agents",
+        "Service map"
+      ],
+      "links": [
+        {
+          "text": "Overview",
+          "href": "/"
+        },
+        {
+          "text": "Map overview",
+          "href": "/?tab=map"
+        },
+        {
+          "text": "Govern overview",
+          "href": "/?tab=govern"
+        },
+        {
+          "text": "Measure overview",
+          "href": "/?tab=measure"
+        },
+        {
+          "text": "Operate overview",
+          "href": "/?tab=operate"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last 15 minutes",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last hour",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last 6 hours",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "Last 24 hours",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "2 / 4AI systems governed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "—Container restarts",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "2 / 3MCP servers approved",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "—Model gateway errors",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "8Recent denials",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About AI systems",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open my AI systems",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Ready",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Restarts",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Last seen",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Decisions",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About MCP servers",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open my MCP servers",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "MCP server",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Registry state",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Tools",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Allowed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Last call",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Model providers",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open my LLM models",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Provider",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Allowed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Latency and errors",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open request traces",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Req/s",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "5xx",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "p95",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Platform dependencies",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Recent failures",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open the logs",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "When",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Kind",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Agents",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Decisions",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denied",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Denial rate",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Show the service map of market-feed-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Show the service map of report-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Show the service map of research-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Show the service map of rogue-agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Service map",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "15m",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "1h",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "6h",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "radio",
+          "name": "24h",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "LLM gate: policies unknown, 0 calls blocked. Open details."
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "MCP gate: policies unknown, 0 calls blocked. Open details."
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "A2A gate: policies unknown, 0 calls blocked. Open details."
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/agents?tab=mine",
+      "href": "/agents?tab=mine",
+      "title": "Agents · Citadel-One",
+      "heading": "Agents",
+      "subheadings": [],
+      "links": [
+        {
+          "text": "Catalog",
+          "href": "/agents"
+        },
+        {
+          "text": "Agents",
+          "href": "/agents?tab=mine"
+        },
+        {
+          "text": "AI system assurance",
+          "href": "/agents?tab=assurance"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Search your AI systems…",
+          "inputType": "text",
+          "placeholder": "Search your AI systems…"
+        },
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Filter by request stage",
+          "options": [
+            "All stages (10)",
+            "Changes requested (2)",
+            "Draft (1)",
+            "Waiting for approvers (1)",
+            "Scanning source (2)",
+            "Sandbox trial running (1)"
+          ]
+        },
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Filter by runtime state",
+          "options": [
+            "Any runtime",
+            "Denied · runtime (2)",
+            "Not deployed (6)",
+            "Governed (2)"
+          ]
+        },
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Show withdrawn requests",
+          "inputType": "checkbox"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About My AI systems",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Onboard AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Compact",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Comfortable",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "AI system",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Description",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Updated",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of market-feed-agent: Denied · runtime, 1 issue. Show details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open market-feed-agent: no open request, Denied · runtime",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of notify-agent: request Changes requested, Not deployed, 1 issue. Show d",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open notify-agent: Changes requested, Not deployed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of data-export-agent: request Changes requested, Not deployed, 1 issue. S",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open data-export-agent: Changes requested, Not deployed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of nightly-recon-agent: request Draft, Not deployed, 1 issue. Show detail",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open nightly-recon-agent: Draft, Not deployed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of report-agent: Governed. Show details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open report-agent: no open request, Governed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of research-agent: Governed. Show details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open research-agent: no open request, Governed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of digest-agent: request Waiting for approvers, Not deployed. Show detail",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open digest-agent: Waiting for approvers, Not deployed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of sync-agent: request Scanning source, Not deployed. Show details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open sync-agent: Scanning source, Not deployed",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of market-feed-agent: request Sandbox trial running, Denied · runtime. Sh",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open market-feed-agent: Sandbox trial running, Denied · runtime",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status of log-summarizer-agent: request Scanning source, Not deployed. Show deta",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Open log-summarizer-agent: Scanning source, Not deployed",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/my-requests/req-0010",
+      "href": "/my-requests/req-0010",
+      "title": "Agents · Citadel-One",
+      "heading": "Agents",
+      "subheadings": [
+        "data-export-agent",
+        "Manifest (declared)",
+        "Scan — declared vs detected",
+        "Sandbox trial",
+        "Proposed policy"
+      ],
+      "links": [],
+      "controls": [
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Back to requests",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Withdraw request",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Samir Sponsor",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Resubmit",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Policy controls",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/agents/data-export-agent",
+      "href": "/agents/data-export-agent",
+      "title": "Agents · Citadel-One",
+      "heading": "Agents",
+      "subheadings": [
+        "report-agent",
+        "What the signed grant allows"
+      ],
+      "links": [],
+      "controls": [
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Agent",
+          "options": [
+            "report-agent",
+            "research-agent",
+            "rogue-agent",
+            "market-feed-agent"
+          ]
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Status: Governed. Activate for an explanation."
+        },
+        {
+          "kind": "click",
+          "role": "summary",
+          "name": "Ownership & identity"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Dora Developer",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Samir Sponsor",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Ava Approver",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Rick Approver",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Grant",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Risk",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Controls21",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Clause coverage",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Approvals2",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Activity2",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Threat coverage",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "tab",
+          "name": "Lifecycle",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About What the signed grant allows",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/agents?tab=assurance",
+      "href": "/agents?tab=assurance",
+      "title": "Agents · Citadel-One",
+      "heading": "Agents",
+      "subheadings": [],
+      "links": [
+        {
+          "text": "Catalog",
+          "href": "/agents"
+        },
+        {
+          "text": "Agents",
+          "href": "/agents?tab=mine"
+        },
+        {
+          "text": "AI system assurance",
+          "href": "/agents?tab=assurance"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Agent",
+          "options": [
+            "report-agent",
+            "research-agent",
+            "rogue-agent",
+            "market-feed-agent"
+          ]
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/agents"
+    },
+    {
+      "id": "/requests?tab=monitoring",
+      "href": "/requests?tab=monitoring",
+      "title": "Requests & decisions · Citadel-One",
+      "heading": "Requests & decisions",
+      "subheadings": [],
+      "links": [
+        {
+          "text": "Request traces",
+          "href": "/requests"
+        },
+        {
+          "text": "Monitoring",
+          "href": "/requests?tab=monitoring"
+        }
+      ],
+      "controls": [
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Agent",
+          "options": [
+            "All agents",
+            "market-feed-agent",
+            "report-agent",
+            "research-agent",
+            "rogue-agent"
+          ]
+        },
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Outcome",
+          "options": [
+            "Allowed and denied",
+            "Allowed",
+            "Denied"
+          ]
+        },
+        {
+          "kind": "select",
+          "role": "select",
+          "name": "Kind",
+          "options": [
+            "All kinds",
+            "Model call",
+            "Outbound request",
+            "MCP tool call",
+            "Secret read",
+            "Content guardrail"
+          ]
+        },
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Search these events…",
+          "inputType": "text",
+          "placeholder": "Search these events…"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Monitoring",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "About Platform events",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Compact",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Comfortable",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "When",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Agent",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Outcome",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Kind",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "What",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Control",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Copy 0af7651916cd43dd8448eb211c80319c",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Copy 5b8aa5a2d2c872e8321cf37308d69df2",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Copy c1f4e6b0a9d84e2f9b3a7d5c2e1f0a8b",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Copy 4bf92f3577b34da6a3ce929d0e0e4736",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "Copy 4bf92f3577b34da6a3ce929d0e0e4736",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        },
+        {
+          "kind": "click",
+          "role": "button",
+          "name": "View details",
+          "inputType": "button"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/requests"
+    }
+  ]
+}

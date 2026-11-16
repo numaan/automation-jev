@@ -61,9 +61,12 @@ const EXTRACT_JS = String.raw`(() => {
       if (el.placeholder) return el.placeholder.trim();
       return (el.getAttribute("name") || "").trim();
     }
+    // Visible text names a button or link; title is only the fallback (as in the
+    // browser's accessible-name rules). Title first hid names like "Agent Developer".
+    const text = (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    if (text) return text;
     const title = el.getAttribute("title");
-    if (title) return title.trim();
-    return (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 120);
+    return title ? title.trim() : "";
   }
 
   const CLICK_SEL = 'a[href], button, [role="button"], [role="link"], [role="tab"], [role="menuitem"], input[type="submit"], input[type="button"], summary';

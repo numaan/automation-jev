@@ -1,0 +1,105 @@
+{
+  "app": "localhost:5461",
+  "origin": "http://localhost:5461",
+  "role": "alice",
+  "generatedAt": "2026-11-16T19:00:33.240Z",
+  "login": {
+    "type": "password",
+    "label": "alice",
+    "loginUrl": "http://localhost:5461/login",
+    "usernameEnv": "DEMO_USER",
+    "passwordEnv": "DEMO_PASS",
+    "username": {
+      "css": "body > form > label:nth-of-type(1) > input",
+      "src": "page.getByLabel(\"Email\")"
+    },
+    "password": {
+      "css": "body > form > label:nth-of-type(2) > input",
+      "src": "page.getByLabel(\"Password\")"
+    },
+    "submit": {
+      "css": "body > form > button",
+      "src": "page.getByRole(\"button\", { name: \"Sign in\" })"
+    }
+  },
+  "shell": {
+    "links": [
+      {
+        "text": "Home",
+        "href": "/"
+      },
+      {
+        "text": "Reports",
+        "href": "/reports"
+      },
+      {
+        "text": "Settings",
+        "href": "/settings"
+      }
+    ],
+    "controls": []
+  },
+  "screens": [
+    {
+      "id": "/",
+      "href": "/",
+      "title": "Home - Demo",
+      "heading": "Home",
+      "subheadings": [],
+      "links": [],
+      "controls": [],
+      "consoleErrors": 0,
+      "failedRequests": 0
+    },
+    {
+      "id": "/reports",
+      "href": "/reports",
+      "title": "Reports - Demo",
+      "heading": "Reports",
+      "subheadings": [
+        "Monthly"
+      ],
+      "links": [
+        {
+          "text": "Q1",
+          "href": "/reports/q1"
+        }
+      ],
+      "controls": [],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/settings",
+      "href": "/settings",
+      "title": "Settings - Demo",
+      "heading": "Settings",
+      "subheadings": [],
+      "links": [],
+      "controls": [
+        {
+          "kind": "fill",
+          "role": "input",
+          "name": "Display name",
+          "placeholder": "Name"
+        }
+      ],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/"
+    },
+    {
+      "id": "/reports/q1",
+      "href": "/reports/q1",
+      "title": "Q1 report - Demo",
+      "heading": "Q1 report",
+      "subheadings": [],
+      "links": [],
+      "controls": [],
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "via": "/reports"
+    }
+  ]
+}
