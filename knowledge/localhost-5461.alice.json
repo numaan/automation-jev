@@ -2,7 +2,7 @@
   "app": "localhost:5461",
   "origin": "http://localhost:5461",
   "role": "alice",
-  "generatedAt": "2026-11-16T19:00:33.240Z",
+  "generatedAt": "2026-11-16T19:29:46.262Z",
   "login": {
     "type": "password",
     "label": "alice",
@@ -48,6 +48,12 @@
       "subheadings": [],
       "links": [],
       "controls": [],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": []
+      },
       "consoleErrors": 0,
       "failedRequests": 0
     },
@@ -66,6 +72,12 @@
         }
       ],
       "controls": [],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": []
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -85,6 +97,12 @@
           "placeholder": "Name"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": []
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -97,6 +115,12 @@
       "subheadings": [],
       "links": [],
       "controls": [],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": []
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/reports"

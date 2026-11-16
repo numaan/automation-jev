@@ -2,7 +2,7 @@
   "app": "localhost:5450",
   "origin": "http://localhost:5450",
   "role": "Agent Developer",
-  "generatedAt": "2026-11-16T19:05:13.502Z",
+  "generatedAt": "2026-11-16T19:29:34.209Z",
   "login": {
     "type": "role",
     "label": "Agent Developer",
@@ -311,6 +311,228 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "Your agents, most urgent first",
+            "columns": [
+              "Agent",
+              "Status",
+              "Needs action",
+              "Risk",
+              "Calls · today",
+              "Blocked · today",
+              "Action"
+            ],
+            "rowCount": 10,
+            "sampleRows": [
+              [
+                "data-export-agent demo",
+                "Changes requested",
+                "Reply to approver",
+                "Not scored",
+                "No calls yet",
+                "None",
+                "Respond"
+              ],
+              [
+                "notify-agent demo",
+                "Changes requested",
+                "Reply to approver",
+                "Not scored",
+                "No calls yet",
+                "None",
+                "Respond"
+              ],
+              [
+                "report-agent demo",
+                "Running",
+                "None",
+                "High · 7.3",
+                "2",
+                "0.0%",
+                ""
+              ]
+            ]
+          }
+        ],
+        "cards": [
+          {
+            "label": "Needs your action",
+            "value": "2",
+            "note": "2 change requests · restarts not known · SEED DATA"
+          },
+          {
+            "label": "Agents running",
+            "value": "2",
+            "note": "of 10 · 2 with changes requested · SEED DATA"
+          },
+          {
+            "label": "Calls · today",
+            "value": "10",
+            "note": "8.2% · vs. same time yesterday"
+          },
+          {
+            "label": "Blocked by policy · today",
+            "value": "80.0%",
+            "note": "0.6 pts · 8 calls"
+          },
+          {
+            "label": "gpt-4o",
+            "value": "1",
+            "note": "gpt-4o-mini · 1"
+          },
+          {
+            "label": "Needs your attention",
+            "value": "2 need your action · 1 for your information",
+            "note": "SEED DATA"
+          },
+          {
+            "label": "Your agents",
+            "value": "10 agents · most urgent first",
+            "note": "Filter agents by name · All agents"
+          }
+        ],
+        "charts": [
+          {
+            "label": "2 of 10 agents running",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "Calls per day for the 14 days before today. Today so far: 10, up 8.2% on the same time yesterday",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "Blocked rate per day for the 7 days before today. Today so far: 80%, up 0.6 points on the same time yesterday",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "Allowed and blocked calls per hour, today from 00:00: 2 allowed, 8 blocked. Busiest hour 16:00 with 10 calls. Most blocked calls at 16:00: 8.",
+            "kind": "svg",
+            "legend": [
+              "2",
+              "8"
+            ],
+            "text": [
+              "0",
+              "5",
+              "10",
+              "00:00",
+              "04:00",
+              "08:00",
+              "12:00",
+              "16:00",
+              "20:00"
+            ],
+            "description": ""
+          },
+          {
+            "label": "gpt-4o 1 call",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "gpt-4o-mini 1 call",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "report-agent calls per 2 h, today from 00:00, total 2",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "0.0% blocked, 0 of 2 calls",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "research-agent calls per 2 h, today from 00:00, total 3",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "100.0% blocked, 3 of 3 calls",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "market-feed-agent calls per 2 h, today from 00:00, total 4",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "100.0% blocked, 4 of 4 calls",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "rogue-agent calls per 2 h, today from 00:00, total 1",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          },
+          {
+            "label": "100.0% blocked, 1 of 1 call",
+            "kind": "svg",
+            "legend": [],
+            "text": [],
+            "description": ""
+          }
+        ],
+        "labels": [
+          {
+            "text": "Seed data",
+            "count": 9
+          },
+          {
+            "text": "In review",
+            "count": 4
+          },
+          {
+            "text": "Changes requested",
+            "count": 2
+          },
+          {
+            "text": "Running",
+            "count": 2
+          },
+          {
+            "text": "Draft",
+            "count": 1
+          },
+          {
+            "text": "Revoked",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0
     },
@@ -447,6 +669,29 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "2 shown",
+            "count": 1
+          },
+          {
+            "text": "Internal",
+            "count": 1
+          },
+          {
+            "text": "high",
+            "count": 1
+          },
+          {
+            "text": "moderate",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -500,6 +745,12 @@
           "inputType": "submit"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": []
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -532,6 +783,12 @@
           "placeholder": "Choose an agent"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": []
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -612,6 +869,44 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "MCP servers",
+            "columns": [
+              "Server",
+              "Status",
+              "Tools",
+              "Purpose",
+              "Requested by",
+              "Open"
+            ],
+            "rowCount": 1,
+            "sampleRows": [
+              [
+                "market-data mcp://marketdata.mcp.svc",
+                "pending review",
+                "2 tools read-only",
+                "Read-only market quotes and price histor",
+                "Dora Developer",
+                "Open"
+              ]
+            ]
+          }
+        ],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "Seed data",
+            "count": 1
+          },
+          {
+            "text": "pending review",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -704,6 +999,56 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "LLM models",
+            "columns": [
+              "Model",
+              "Status",
+              "Capability class",
+              "Purpose",
+              "Requested by",
+              "Open"
+            ],
+            "rowCount": 2,
+            "sampleRows": [
+              [
+                "qwen3.8-27b openrouter/qwen/qwen3.8-27b:",
+                "pending review",
+                "set on certification",
+                "Summarise market-feed headlines for mark",
+                "Dora Developer",
+                "Open"
+              ],
+              [
+                "claude-sonnet anthropic/claude-sonnet-4-",
+                "approved",
+                "frontier",
+                "Longer-context reasoning for the platfor",
+                "Dora Developer",
+                "Open"
+              ]
+            ]
+          }
+        ],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "Seed data",
+            "count": 1
+          },
+          {
+            "text": "pending review",
+            "count": 1
+          },
+          {
+            "text": "approved",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -793,6 +1138,21 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "sample data",
+            "count": 1
+          },
+          {
+            "text": "ok",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -1013,6 +1373,205 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "Widest entitlements",
+            "columns": [
+              "Agent",
+              "Models",
+              "Tools r / w",
+              "Secrets",
+              "Hosts"
+            ],
+            "rowCount": 4,
+            "sampleRows": [
+              [
+                "report-agent",
+                "2",
+                "4 / 0",
+                "1",
+                "1"
+              ],
+              [
+                "market-feed-agent",
+                "1",
+                "1 / 0",
+                "0",
+                "0"
+              ],
+              [
+                "research-agent",
+                "1",
+                "1 / 0",
+                "0",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "External hosts in grants",
+            "columns": [
+              "Host",
+              "Agents",
+              "Reached by"
+            ],
+            "rowCount": 1,
+            "sampleRows": [
+              [
+                "api.openai.com",
+                "1",
+                "report-agent"
+              ]
+            ]
+          },
+          {
+            "title": "MCP server dependencies",
+            "columns": [
+              "MCP server",
+              "State",
+              "Tools r / w",
+              "Used by"
+            ],
+            "rowCount": 5,
+            "sampleRows": [
+              [
+                "warehouse",
+                "Certified",
+                "2 / 1",
+                "3"
+              ],
+              [
+                "claims-store",
+                "Certified",
+                "2 / 1",
+                "3"
+              ],
+              [
+                "market-data",
+                "In review",
+                "2 / 0",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Model dependencies",
+            "columns": [
+              "Model",
+              "Class",
+              "Tool calling",
+              "Used by"
+            ],
+            "rowCount": 9,
+            "sampleRows": [
+              [
+                "claude-haiku",
+                "mini",
+                "yes",
+                "2"
+              ],
+              [
+                "gpt-4o-mini",
+                "mini",
+                "yes",
+                "2"
+              ],
+              [
+                "claude-opus",
+                "frontier",
+                "yes",
+                "0"
+              ]
+            ]
+          }
+        ],
+        "cards": [
+          {
+            "label": "Your agents",
+            "value": "4",
+            "note": ""
+          },
+          {
+            "label": "MCP servers certified",
+            "value": "2 of 5",
+            "note": ""
+          },
+          {
+            "label": "MCP servers in use",
+            "value": "2",
+            "note": ""
+          },
+          {
+            "label": "LLM models listed",
+            "value": "9",
+            "note": ""
+          },
+          {
+            "label": "LLM models in use",
+            "value": "2",
+            "note": ""
+          },
+          {
+            "label": "Agents by department",
+            "value": "4",
+            "note": "demo"
+          },
+          {
+            "label": "Data classes in scope",
+            "value": "1",
+            "note": "declare one · Internal"
+          }
+        ],
+        "charts": [
+          {
+            "label": "Agents by status",
+            "kind": "svg",
+            "legend": [
+              "Running",
+              "2",
+              "(50%)",
+              "Certified",
+              "0",
+              "(0%)",
+              "Revoked"
+            ],
+            "text": [
+              "4",
+              "agents"
+            ],
+            "description": ""
+          },
+          {
+            "label": "Agents by declared data class",
+            "kind": "svg",
+            "legend": [
+              "Internal",
+              "1",
+              "(100%)"
+            ],
+            "text": [
+              "1",
+              "declare one"
+            ],
+            "description": ""
+          }
+        ],
+        "labels": [
+          {
+            "text": "Certified",
+            "count": 2
+          },
+          {
+            "text": "In review",
+            "count": 2
+          },
+          {
+            "text": "Rejected",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -1096,6 +1655,146 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "Policies",
+            "columns": [
+              "Policy",
+              "Risk of non-compliance",
+              "Controls",
+              "Regulations",
+              "Version"
+            ],
+            "rowCount": 6,
+            "sampleRows": [
+              [
+                "Human model access",
+                "medium",
+                "1",
+                "14",
+                "v4"
+              ],
+              [
+                "Agent model access",
+                "medium",
+                "2",
+                "14",
+                "v12"
+              ],
+              [
+                "Agent egress",
+                "high",
+                "1",
+                "16",
+                "v16"
+              ]
+            ]
+          },
+          {
+            "title": "Controls",
+            "columns": [
+              "Control",
+              "Title",
+              "Coverage",
+              "Enforced by",
+              "Citations"
+            ],
+            "rowCount": 21,
+            "sampleRows": [
+              [
+                "CTL-ADMISSION",
+                "Admission: only a certified, instrumente",
+                "partial",
+                "Gatekeeper K8sRequireCitadelCert, K8sReq",
+                "23"
+              ],
+              [
+                "CTL-APPROVAL-NOFM",
+                "Human N-of-M approval & accountability f",
+                "partial",
+                "console review + signed CR",
+                "14"
+              ],
+              [
+                "CTL-AUDIT-TAMPER",
+                "Tamper-evident audit trail",
+                "full",
+                "citadel_audit.py",
+                "26"
+              ]
+            ]
+          }
+        ],
+        "cards": [
+          {
+            "label": "Pending approval",
+            "value": "1",
+            "note": "16 of 21 · Controls in enforce mode"
+          },
+          {
+            "label": "Awaiting approval",
+            "value": "1",
+            "note": "AI systems · 0"
+          }
+        ],
+        "charts": [
+          {
+            "label": "Controls by coverage",
+            "kind": "svg",
+            "legend": [
+              "partial",
+              "13",
+              "(62%)",
+              "planned",
+              "5",
+              "(24%)",
+              "full",
+              "3",
+              "(14%)"
+            ],
+            "text": [
+              "21",
+              "controls"
+            ],
+            "description": ""
+          },
+          {
+            "label": "Policies by risk",
+            "kind": "svg",
+            "legend": [
+              "high risk of non-compliance",
+              "3",
+              "(50%)",
+              "medium risk of non-compliance",
+              "2",
+              "(33%)",
+              "low risk of non-compliance",
+              "1",
+              "(17%)"
+            ],
+            "text": [
+              "6",
+              "policies"
+            ],
+            "description": ""
+          }
+        ],
+        "labels": [
+          {
+            "text": "high",
+            "count": 3
+          },
+          {
+            "text": "medium",
+            "count": 2
+          },
+          {
+            "text": "low",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -1317,6 +2016,132 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "Traffic by AI system",
+            "columns": [
+              "AI system",
+              "Req/s",
+              "5xx",
+              "Denied",
+              "p95"
+            ],
+            "rowCount": 4,
+            "sampleRows": [
+              [
+                "market-feed-agent",
+                "0.8",
+                "—",
+                "100%",
+                "8 ms"
+              ],
+              [
+                "research-agent",
+                "0.6",
+                "—",
+                "100%",
+                "8 ms"
+              ],
+              [
+                "report-agent",
+                "0.4",
+                "—",
+                "0%",
+                "180 ms"
+              ]
+            ]
+          },
+          {
+            "title": "Where requests go",
+            "columns": [
+              "Destination",
+              "Req/s",
+              "5xx",
+              "Denied",
+              "p95 (slowest caller)"
+            ],
+            "rowCount": 3,
+            "sampleRows": [
+              [
+                "Outbound egress",
+                "1.4",
+                "—",
+                "100%",
+                "8 ms"
+              ],
+              [
+                "Model gateway",
+                "0.4",
+                "—",
+                "50%",
+                "180 ms"
+              ],
+              [
+                "MCP gateway",
+                "0.2",
+                "—",
+                "0%",
+                "90 ms"
+              ]
+            ]
+          },
+          {
+            "title": "Policy decisions by kind",
+            "columns": [
+              "Kind",
+              "Allowed",
+              "Denied",
+              "Denied share"
+            ],
+            "rowCount": 3,
+            "sampleRows": [
+              [
+                "Outbound requests",
+                "0",
+                "7",
+                "100%"
+              ],
+              [
+                "Model calls",
+                "1",
+                "1",
+                "50%"
+              ],
+              [
+                "MCP tool calls",
+                "1",
+                "0",
+                "0%"
+              ]
+            ]
+          }
+        ],
+        "cards": [
+          {
+            "label": "Requests per second",
+            "value": "2",
+            "note": "— · Server errors"
+          },
+          {
+            "label": "Allowed and denied",
+            "value": "2",
+            "note": "SEED DATA · allowed"
+          },
+          {
+            "label": "Denials by AI system",
+            "value": "4",
+            "note": "SEED DATA · market-feed-agent"
+          }
+        ],
+        "charts": [],
+        "labels": [
+          {
+            "text": "Seed data",
+            "count": 5
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -1898,6 +2723,306 @@
           "name": "A2A gate: policies unknown, 0 calls blocked. Open details."
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "AI systems",
+            "columns": [
+              "AI system",
+              "Status",
+              "Ready",
+              "Restarts",
+              "Last exit",
+              "Last seen",
+              "Decisions",
+              "Denied"
+            ],
+            "rowCount": 4,
+            "sampleRows": [
+              [
+                "market-feed-agent",
+                "Denied",
+                "—",
+                "—",
+                "—",
+                "Not reported",
+                "4",
+                "4"
+              ],
+              [
+                "rogue-agent",
+                "Uncertified",
+                "—",
+                "—",
+                "—",
+                "Not reported",
+                "1",
+                "1"
+              ],
+              [
+                "research-agent",
+                "Governed",
+                "—",
+                "—",
+                "—",
+                "Not reported",
+                "3",
+                "3"
+              ]
+            ]
+          },
+          {
+            "title": "MCP servers",
+            "columns": [
+              "MCP server",
+              "Registry state",
+              "Tools",
+              "Used by",
+              "Allowed",
+              "Denied",
+              "Last call"
+            ],
+            "rowCount": 3,
+            "sampleRows": [
+              [
+                "claims-store",
+                "Approved",
+                "3",
+                "market-feed-agent, report-agent, researc",
+                "0",
+                "0",
+                "—"
+              ],
+              [
+                "market-data",
+                "Pending review",
+                "2",
+                "—",
+                "0",
+                "0",
+                "—"
+              ],
+              [
+                "warehouse",
+                "Approved",
+                "3",
+                "market-feed-agent, report-agent, researc",
+                "0",
+                "0",
+                "—"
+              ]
+            ]
+          },
+          {
+            "title": "Model providers",
+            "columns": [
+              "Provider",
+              "Models",
+              "Used by",
+              "Allowed",
+              "Denied"
+            ],
+            "rowCount": 2,
+            "sampleRows": [
+              [
+                "anthropic",
+                "claude-haiku",
+                "market-feed-agent, report-agent",
+                "0",
+                "0"
+              ],
+              [
+                "openai",
+                "gpt-4o-mini",
+                "report-agent, research-agent",
+                "1",
+                "0"
+              ]
+            ]
+          },
+          {
+            "title": "Latency and errors",
+            "columns": [
+              "AI system",
+              "Req/s",
+              "5xx",
+              "p95"
+            ],
+            "rowCount": 4,
+            "sampleRows": [
+              [
+                "market-feed-agent",
+                "0.8",
+                "—",
+                "8 ms"
+              ],
+              [
+                "research-agent",
+                "0.6",
+                "—",
+                "8 ms"
+              ],
+              [
+                "report-agent",
+                "0.4",
+                "—",
+                "180 ms"
+              ]
+            ]
+          },
+          {
+            "title": "Recent failures",
+            "columns": [
+              "When",
+              "AI system",
+              "Kind",
+              "What",
+              "Control"
+            ],
+            "rowCount": 8,
+            "sampleRows": [
+              [
+                "Not reported",
+                "research-agent",
+                "Outbound requests",
+                "api.example.com",
+                "Network egress allow-list"
+              ],
+              [
+                "Not reported",
+                "research-agent",
+                "Outbound requests",
+                "api.example.com",
+                "Network egress allow-list"
+              ],
+              [
+                "Not reported",
+                "research-agent",
+                "Outbound requests",
+                "api.example.com",
+                "Network egress allow-list"
+              ]
+            ]
+          },
+          {
+            "title": "Agents",
+            "columns": [
+              "Agent",
+              "Decisions",
+              "Denied",
+              "Denial rate",
+              "Open"
+            ],
+            "rowCount": 4,
+            "sampleRows": [
+              [
+                "market-feed-agent",
+                "4",
+                "4",
+                "100%",
+                "Open"
+              ],
+              [
+                "report-agent",
+                "2",
+                "0",
+                "0%",
+                "Open"
+              ],
+              [
+                "research-agent",
+                "3",
+                "3",
+                "100%",
+                "Open"
+              ]
+            ]
+          }
+        ],
+        "cards": [
+          {
+            "label": "AI systems governed",
+            "value": "2 / 4",
+            "note": ""
+          },
+          {
+            "label": "MCP servers approved",
+            "value": "2 / 3",
+            "note": ""
+          },
+          {
+            "label": "Recent denials",
+            "value": "8",
+            "note": ""
+          },
+          {
+            "label": "Agents monitored",
+            "value": "4",
+            "note": "10 · Decisions"
+          }
+        ],
+        "charts": [
+          {
+            "label": "Service map of market-feed-agent",
+            "kind": "svg",
+            "legend": [],
+            "text": [
+              "no traffic in this window",
+              "egress",
+              "0.80 req/s · 100% err · p95 8.0 ms",
+              "market-feed-agent",
+              "3",
+              "LLM gate",
+              "1",
+              "MCP gate",
+              "A2A gate"
+            ],
+            "description": ""
+          }
+        ],
+        "labels": [
+          {
+            "text": "Seed data",
+            "count": 4
+          },
+          {
+            "text": "Up",
+            "count": 3
+          },
+          {
+            "text": "Governed",
+            "count": 2
+          },
+          {
+            "text": "Approved",
+            "count": 2
+          },
+          {
+            "text": "Denied",
+            "count": 1
+          },
+          {
+            "text": "Uncertified",
+            "count": 1
+          },
+          {
+            "text": "Pending review",
+            "count": 1
+          },
+          {
+            "text": "sample data",
+            "count": 1
+          },
+          {
+            "text": "3",
+            "count": 1
+          },
+          {
+            "text": "1",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -2129,6 +3254,94 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "My AI systems",
+            "columns": [
+              "AI system",
+              "Description",
+              "Status",
+              "Approver",
+              "Info",
+              "Updated",
+              "Open"
+            ],
+            "rowCount": 10,
+            "sampleRows": [
+              [
+                "market-feed-agent",
+                "Summarises market data feeds into a dail",
+                "Request: none open Runtime: Denied · run",
+                "—",
+                "!",
+                "2 h ago",
+                "Open"
+              ],
+              [
+                "notify-agent",
+                "Sample notify-agent for the developer's ",
+                "Request: Changes requested Runtime: Not ",
+                "—",
+                "!",
+                "122 d ago",
+                "Open"
+              ],
+              [
+                "data-export-agent",
+                "Exports reconciled datasets to the analy",
+                "Request: Changes requested Runtime: Not ",
+                "—",
+                "!",
+                "122 d ago",
+                "Open"
+              ]
+            ]
+          }
+        ],
+        "cards": [
+          {
+            "label": "In progress",
+            "value": "3",
+            "note": "1 · Awaiting review"
+          }
+        ],
+        "charts": [],
+        "labels": [
+          {
+            "text": "Not deployed",
+            "count": 6
+          },
+          {
+            "text": "Denied · runtime",
+            "count": 2
+          },
+          {
+            "text": "Changes requested",
+            "count": 2
+          },
+          {
+            "text": "Governed",
+            "count": 2
+          },
+          {
+            "text": "Scanning source",
+            "count": 2
+          },
+          {
+            "text": "Draft",
+            "count": 1
+          },
+          {
+            "text": "Waiting for approvers",
+            "count": 1
+          },
+          {
+            "text": "Sandbox trial running",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -2184,6 +3397,81 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "high",
+            "count": 1
+          },
+          {
+            "text": "changes requested",
+            "count": 1
+          },
+          {
+            "text": "0/2 approvals",
+            "count": 1
+          },
+          {
+            "text": "model:gpt-4o-mini",
+            "count": 1
+          },
+          {
+            "text": "mcp-read:query",
+            "count": 1
+          },
+          {
+            "text": "mcp-read:read_rows",
+            "count": 1
+          },
+          {
+            "text": "mcp-write:write_rows",
+            "count": 1
+          },
+          {
+            "text": "rest:storage.googleapis.com",
+            "count": 1
+          },
+          {
+            "text": "secret:secret/data/warehouse",
+            "count": 1
+          },
+          {
+            "text": "secret:secret/data/analytics",
+            "count": 1
+          },
+          {
+            "text": "complete",
+            "count": 1
+          },
+          {
+            "text": "mcp:write_rows · match",
+            "count": 1
+          },
+          {
+            "text": "mcp:delete_rows · UNDER-DECLARED",
+            "count": 1
+          },
+          {
+            "text": "gpt-4o-mini",
+            "count": 1
+          },
+          {
+            "text": "queryread_rows",
+            "count": 1
+          },
+          {
+            "text": "write_rows",
+            "count": 1
+          },
+          {
+            "text": "tar",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -2299,6 +3587,61 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "· explanation",
+            "count": 1
+          },
+          {
+            "text": "certified grant",
+            "count": 1
+          },
+          {
+            "text": "High risk",
+            "count": 1
+          },
+          {
+            "text": "gpt-4o-mini",
+            "count": 1
+          },
+          {
+            "text": "claude-haiku",
+            "count": 1
+          },
+          {
+            "text": "query",
+            "count": 1
+          },
+          {
+            "text": "read_rows",
+            "count": 1
+          },
+          {
+            "text": "hr-mcp-lookup-employee",
+            "count": 1
+          },
+          {
+            "text": "hr-mcp-search-directory",
+            "count": 1
+          },
+          {
+            "text": "api.openai.com",
+            "count": 1
+          },
+          {
+            "text": "secret/data/external-api",
+            "count": 1
+          },
+          {
+            "text": "Internal",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/"
@@ -2336,6 +3679,61 @@
           ]
         }
       ],
+      "data": {
+        "tables": [],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "· explanation",
+            "count": 1
+          },
+          {
+            "text": "certified grant",
+            "count": 1
+          },
+          {
+            "text": "High risk",
+            "count": 1
+          },
+          {
+            "text": "gpt-4o-mini",
+            "count": 1
+          },
+          {
+            "text": "claude-haiku",
+            "count": 1
+          },
+          {
+            "text": "query",
+            "count": 1
+          },
+          {
+            "text": "read_rows",
+            "count": 1
+          },
+          {
+            "text": "hr-mcp-lookup-employee",
+            "count": 1
+          },
+          {
+            "text": "hr-mcp-search-directory",
+            "count": 1
+          },
+          {
+            "text": "api.openai.com",
+            "count": 1
+          },
+          {
+            "text": "secret/data/external-api",
+            "count": 1
+          },
+          {
+            "text": "Internal",
+            "count": 1
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/agents"
@@ -2550,6 +3948,68 @@
           "inputType": "button"
         }
       ],
+      "data": {
+        "tables": [
+          {
+            "title": "Platform events",
+            "columns": [
+              "When",
+              "Agent",
+              "Outcome",
+              "Kind",
+              "What",
+              "Control",
+              "Trace",
+              "Open"
+            ],
+            "rowCount": 10,
+            "sampleRows": [
+              [
+                "Not reported",
+                "rogue-agent",
+                "Denied",
+                "Model call",
+                "gpt-4o",
+                "Policy decision",
+                "—",
+                "Open"
+              ],
+              [
+                "Not reported",
+                "research-agent",
+                "Denied",
+                "Outbound request",
+                "api.example.com",
+                "Network egress allow-list",
+                "0af76519…319c Copy",
+                "Open"
+              ],
+              [
+                "Not reported",
+                "research-agent",
+                "Denied",
+                "Outbound request",
+                "api.example.com",
+                "Network egress allow-list",
+                "5b8aa5a2…9df2 Copy",
+                "Open"
+              ]
+            ]
+          }
+        ],
+        "cards": [],
+        "charts": [],
+        "labels": [
+          {
+            "text": "Denied",
+            "count": 8
+          },
+          {
+            "text": "Allowed",
+            "count": 2
+          }
+        ]
+      },
       "consoleErrors": 0,
       "failedRequests": 0,
       "via": "/requests"

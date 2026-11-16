@@ -8,6 +8,7 @@ import type { Step } from "./types.js";
 import { factorShell, saveKnowledge, type KbScreen, type Knowledge } from "./knowledge.js";
 import { denyRegex, loadAppConfig, loginLabel, type AppConfig } from "./config.js";
 import { performLogin } from "./login.js";
+import { extractData } from "./data.js";
 
 // Usage: npm run crawl -- --config apps/<app>.json [--headless]
 //    or: npm run crawl -- <url> --login "Role" [--headless] [--max 40] [--per-pattern 1]
@@ -261,6 +262,7 @@ async function record(
       placeholder: c.placeholder,
       options: c.options?.slice(0, 30).map((o) => o.label),
     }));
+  const data = await extractData(page, cfg.linkWaitMs);
   reports.push({
     id: href,
     href,
@@ -269,6 +271,7 @@ async function record(
     subheadings,
     links,
     controls,
+    data,
     consoleErrors: consoleErrors.length,
     failedRequests: failed.length,
   });

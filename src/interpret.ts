@@ -140,12 +140,14 @@ export async function chooseScreen(params: {
   screens: Record<string, string>; // id -> description
   /** True when the step only moves to a screen ("go to X"): the answer is the destination. */
   navigate?: boolean;
+  /** Keep quoted text in the question: for data checks the quotes name a table, card or chart. */
+  keepQuoted?: boolean;
 }): Promise<ScreenDecision> {
-  const { step, currentScreen, previousSteps, screens, navigate } = params;
+  const { step, currentScreen, previousSteps, screens, navigate, keepQuoted } = params;
   const forTarget = step.replace(/"[^"]*"|'[^']*'/g, " ").replace(/\s+/g, " ").trim();
   const response = await client.systemOne({
     state: {
-      acceptanceCriterionStep: forTarget || step,
+      acceptanceCriterionStep: keepQuoted ? step : forTarget || step,
       // A navigation step must not see the current screen, or the model stays put.
       ...(navigate ? {} : { currentScreen: currentScreen ?? "none", previousSteps }),
     },

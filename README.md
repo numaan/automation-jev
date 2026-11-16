@@ -185,3 +185,35 @@ One step per line. `Given`, `When`, `Then` and `And` are optional.
 Verdicts: `pass`, `fail`, `unsure` (skipped or not proof), `skipped`.
 `unsure` appears when the model is below `--min` confidence, when the page has no element for
 the named area, or when the text appears only because the page echoes a value the run typed.
+
+## What the explorer records about displayed data
+
+Each screen in the knowledge JSON has a `data` section:
+
+| Field | Content |
+|---|---|
+| `tables` | Title, column names, row count, first 3 rows, empty-state text. Grids with ARIA roles count too. |
+| `cards` | KPI blocks: a label, one number, and a short note |
+| `charts` | The label (often with the values), the kind (`svg` or `canvas`), legend text, axis and data labels, description |
+| `labels` | Chips, badges and status text, with how often each appears |
+
+The values are samples. Live data changes between runs, so use them for shape (columns, row count,
+"is a number"), not as exact expected values. Bar and line values are not in the page text;
+only what the chart exposes as text is recorded. Cards come from a heuristic and can include noise.
+
+### Checking displayed data
+
+These lines read the live page with the same extractor as the explorer.
+Values are read at run time, so a changed row count or number is caught.
+
+| Line | Check |
+|---|---|
+| `Then the "Models" table should have the columns "Model" and "Status"` | Column names (loose match: case, punctuation) |
+| `the "Agents" table should have at least 1 row` / `at most 5 rows` / `exactly 3 rows` / `should not be empty` / `should have no rows` | Row count |
+| `the row "data-export-agent" should show "Changes requested"` | A row that contains the first text also contains the second |
+| `the card "Calls today" should show a number` / `show "10"` / `should not be empty` | A KPI card |
+| `the chart "Agents by status" should be visible` / `should show "partial"` | A chart by its label; the text may be in the label, legend or axis text |
+
+Name the table with a quoted title (`the "Models" table`). Without a title the line works only when the page has one table.
+A failed data check still writes its assertion into the spec, so the replay fails too.
+A chart's bars cannot be read: only the label, legend and text that the chart exposes.

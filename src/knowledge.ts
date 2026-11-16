@@ -19,6 +19,38 @@ export interface KbLogin {
   submit?: KbField;
 }
 
+/** A table or grid on a screen. Values are samples: live data changes between runs. */
+export interface KbTable {
+  title: string;
+  columns: string[];
+  rowCount: number;
+  sampleRows: string[][];
+  /** Message shown instead of rows ("No matches"), when the table is empty. */
+  emptyText?: string;
+}
+/** A KPI card: one label, one number. */
+export interface KbCard {
+  label: string;
+  value: string;
+  note?: string;
+}
+/** A chart. Bar and line values are not in the DOM; only labels and legend text are. */
+export interface KbChart {
+  label: string;
+  kind: "svg" | "canvas";
+  legend: string[];
+  text: string[];
+  description: string;
+}
+/** The data a screen displays. */
+export interface KbData {
+  tables: KbTable[];
+  cards: KbCard[];
+  charts: KbChart[];
+  /** Chips, badges and status text with how often each appears. */
+  labels: { text: string; count: number }[];
+}
+
 /** What the explorer learned about one screen of the app. */
 export interface KbControl {
   kind: string; // click | fill | select
@@ -41,6 +73,7 @@ export interface KbScreen {
   subheadings: string[];
   links: KbLink[]; // links specific to this screen (shell links removed)
   controls: KbControl[]; // controls specific to this screen (shell removed)
+  data?: KbData; // tables, cards, charts and labels shown on the screen
   via?: string; // screen id where the explorer found the link
   consoleErrors: number;
   failedRequests: number;
@@ -152,7 +185,16 @@ export function describeScreen(s: KbScreen): string {
   if (links.length) parts.push(`links: ${links.join("; ")}`);
   const ctl = s.controls.slice(0, 10).map((c) => c.name).filter(Boolean);
   if (ctl.length) parts.push(`controls: ${ctl.join("; ")}`);
-  return parts.join(" | ").slice(0, 600);
+  const d = s.data;
+  if (d) {
+    const t = d.tables.slice(0, 4).map((x) => `${x.title || "table"} (${x.columns.slice(0, 6).join(", ")})`);
+    if (t.length) parts.push(`tables: ${t.join("; ")}`);
+    const ch = d.charts.map((x) => x.label).filter(Boolean).slice(0, 4);
+    if (ch.length) parts.push(`charts: ${ch.join("; ")}`);
+    const cd = d.cards.map((x) => x.label).slice(0, 6);
+    if (cd.length) parts.push(`cards: ${cd.join("; ")}`);
+  }
+  return parts.join(" | ").slice(0, 900);
 }
 
 /** Escape text for use inside a RegExp source. */

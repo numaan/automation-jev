@@ -8,6 +8,7 @@ import { chooseOption, chooseScreen, interpretInstruction, judgeStatement } from
 import { describeScreen, findPath, loadKnowledge } from "./knowledge.js";
 import { replayLogin } from "./login.js";
 import { checkText, parseTextCriterion, type Typed } from "./assertions.js";
+import { checkData, parseDataCriterion } from "./datacheck.js";
 import { emitScript } from "./emit.js";
 import type { Step } from "./types.js";
 
@@ -95,7 +96,8 @@ async function main() {
     const typed: Typed[] = [];
     for (const raw of lines) {
       const step = strip(raw);
-      const kind: Result["kind"] = ASSERT.test(raw) ? "assert" : "action";
+      const dataCrit = parseDataCriterion(raw);
+      const kind: Result["kind"] = dataCrit || ASSERT.test(raw) ? "assert" : "action";
       console.log(`\n▶ ${raw}`);
 
       // "Given I am signed in as X" describes a state the login step already created.
@@ -117,7 +119,7 @@ async function main() {
 
       // Which screen? Prefer staying put when the current screen is nearly as likely.
       const navOnly = isNavigation(raw);
-      const d = await chooseScreen({ step, currentScreen: known, previousSteps: done.slice(-4), screens: descriptions, navigate: navOnly });
+      const d = await chooseScreen({ step, currentScreen: known, previousSteps: done.slice(-4), screens: descriptions, navigate: navOnly, keepQuoted: Boolean(dataCrit) });
       let target = d.pick;
       if (!navOnly && known && (d.probabilities[known] ?? 0) >= 0.5 * (d.probabilities[d.pick] ?? 0)) target = known;
       console.log(`  screen → ${target} (conf ${d.confidence.toFixed(2)})${target === known ? " [stay]" : ""}`);
@@ -159,6 +161,16 @@ async function main() {
           detail: arrived ? `on ${target}` : `ended on ${key(page.url())}`,
         });
         console.log(arrived ? `  ✓ on ${target}` : `  ✗ ended on ${key(page.url())}`);
+        done.push(step);
+        continue;
+      }
+
+      if (dataCrit) {
+        const r = await checkData(page, dataCrit);
+        if (r.locators.length === 0) steps.push({ action: "assert", locator: "", note: `${raw} (${r.detail})` });
+        else r.locators.forEach((l, i) => steps.push({ action: "assert", locator: l, note: i === 0 ? raw : "  and" }));
+        results.push({ step: raw, kind, screen: target, verdict: r.verdict, detail: r.detail });
+        console.log(`  ${r.verdict === "pass" ? "✓" : r.verdict === "fail" ? "✗" : "?"} ${r.detail}`);
         done.push(step);
         continue;
       }
